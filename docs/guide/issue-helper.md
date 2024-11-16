@@ -28,9 +28,7 @@ import {
   Submit,
 } from '@formily/antd'
 import semver from 'semver'
-import ReactMde from 'react-mde'
 import * as Showdown from 'showdown'
-import 'react-mde/lib/styles/css/react-mde-all.css'
 
 const converter = new Showdown.Converter({
   tables: true,
@@ -43,19 +41,6 @@ const MdInput = ({ value, onChange }) => {
   const [selectedTab, setSelectedTab] = React.useState('write')
   return (
     <div style={{ fontSize: 12, lineHeight: 1 }}>
-      <ReactMde
-        value={value}
-        onChange={onChange}
-        selectedTab={selectedTab}
-        onTabChange={setSelectedTab}
-        generateMarkdownPreview={(markdown) =>
-          Promise.resolve(
-            `<div class="markdown" style="margin:0 20px;">${
-              converter.makeHtml(markdown) || ''
-            }</div>`
-          )
-        }
-      />
     </div>
   )
 }

@@ -25,7 +25,6 @@
     "@formily/shared": "2.3.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-json-view": "^1.19.1",
     "react-treebeard": "^3.2.4"
   },
   "publishConfig": {
